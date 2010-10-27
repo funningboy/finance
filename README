@@ -1,0 +1,28 @@
+
+hi all,
+
+this is a sample tool to get the statisitc info from finance history data.
+
+1.in indicator parts : 
+you can get some indsocators by KD(9), MACD(9), RSI(9)....
+
+ex : you can get the KD value of "2335.TW" at 2010/08/12 by length 9
+     取得2335 的KD[9] 值,@ 2010/08/12
+
+ my $hslist = $info->get_file_info('2325.TW.csv');
+ my $kd  = $ikd->get_KD('9','2010/08/12');
+
+
+2.in market    parts :
+you can get the super sell/buy, trader detail info from publish web
+
+ex : get the "super_buy" info at 2010/10/27 by length 1
+     取得2010/10/27 外資當日[1]的買超明細
+ 
+   $trader->set_market_super_hstable($market_super_hstable);
+my $rst = $trader->get_bk_external_super_buy_hstable('1','2010/10/27');
+
+how to use it?
+perl test.pl
+
+ps: you should know how to install the package from cpan ..... 
