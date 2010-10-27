@@ -1,5 +1,11 @@
 #!/usr/bin/perl
 
+#==================================================
+#author: sean chen mail: funningboy@gmail.com
+#publish 2010/10/27
+#License: BSD
+#==================================================
+
 use SYS::GLB;
 
 use FINANCE::HISTORY_INFO;
