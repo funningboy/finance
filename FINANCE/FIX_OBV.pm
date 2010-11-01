@@ -49,7 +49,7 @@ sub get_all_FIX_OBV_by_inx{
 	                 ($FINANCE::FIX_OBV::util->get_hg_pric_by_inx($i) - $FINANCE::FIX_OBV::util->get_lw_pric_by_inx($i));	
 	         }
 	        
-                my $dri = $FINANCE::OBV::util->get_cl_pric_by_inx($i) - $FINANCE::OBV::util->get_cl_pric_by_inx($i-1); 
+                my $dri = $FINANCE::FIX_OBV::util->get_cl_pric_by_inx($i) - $FINANCE::FIX_OBV::util->get_cl_pric_by_inx($i-1); 
 
 	        if($dri >0 ){
                     $obv += $fact * $FINANCE::FIX_OBV::util->get_vol_by_inx($i);
