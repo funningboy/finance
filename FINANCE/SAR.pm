@@ -20,6 +20,7 @@ sub get_help{
       case "get_input_info" { printf("@ input hash table error                            \
                                    please check the %hash in new*( had already exist \n"); }
    }
+die;
 }
 
 sub new {
@@ -109,7 +110,7 @@ sub get_all_SAR_by_inx{
             	} 
             }
             else{                    
-            	$sar += $inc_fact*($sar-$FINANCE::SAR::util->get_bk_lowest_pric_by_inx($len,$j-1));  
+            	$sar += $inc_fact*($FINANCE::SAR::util->get_bk_lowest_pric_by_inx($len,$j-1)-$sar);  
                
                 if($FINANCE::SAR::util->get_lw_pric_by_inx($j) < $FINANCE::SAR::util->get_lw_pric_by_inx($j-1)){
                       if($inc_fact>=0.2){ $inc_fact =0.2;    }

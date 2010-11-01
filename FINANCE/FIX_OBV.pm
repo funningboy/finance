@@ -19,6 +19,7 @@ sub get_help{
       case "get_input_info" { printf("@ input hash table error                            \
                                    please check the %hash in new*( had already exist \n"); }
    }
+die;
 }
 
 sub new {

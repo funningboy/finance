@@ -27,6 +27,7 @@ sub get_help{
                                        please check the (inx + period - 1)<max_inx
                                        cur @            ($inx + $perid - 1)< $ed\n");         }
    }
+die;
 }
 
 sub new {

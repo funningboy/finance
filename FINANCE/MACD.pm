@@ -20,6 +20,7 @@ sub get_help{
       case "get_input_info" { printf("@ input hash table error                            \
                                    please check the %hash in new*( had already exist \n"); }
    }
+die;
 }
 
 sub new {
@@ -83,7 +84,7 @@ sub get_all_MACD_by_inx{
 sub get_all_dif_by_inx{
            my ($len,$inx) = (@_);	
 	    
-           my $bg_inx   = $len;
+           my $bg_inx   = $len+26;
            my $ema_fast = $FINANCE::MACD::util->get_bk_avg_close_pric_by_inx(12,$bg_inx);
            my $ema_slow = $FINANCE::MACD::util->get_bk_avg_close_pric_by_inx(26,$bg_inx);
 

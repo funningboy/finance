@@ -19,6 +19,7 @@ sub get_help{
       case "get_input_info" { printf("@ input hash table error                            \
                                    please check the %hash in new*( had already exist \n"); }
    }
+die;
 }
 
 sub new {
@@ -34,7 +35,7 @@ return bless {};
 
 sub get_TR_by_inx {
      my ($inx) = (@_);
-     my (@tr) =[];
+     my (@tr) = ();
     #H_[t] - L_[t]
      push(@tr, abs($FINANCE::ATR::util->get_hg_pric_by_inx($inx) - $FINANCE::ATR::util->get_lw_pric_by_inx($inx)));  
      #H_[t] - C_[t-1]

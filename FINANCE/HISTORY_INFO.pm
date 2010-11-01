@@ -91,6 +91,8 @@ sub get_file_info{
  
   my %arr = %FINANCE::HISTORY_INFO::hsptr; 
          %FINANCE::HISTORY_INFO::hsptr = ();
+
+  close(iFilePtr);
   return \%arr;
 }
 
